@@ -152,7 +152,7 @@ check-doc-magic:
 ## work with make -j n.
 ##
 .el.elc:
-	$(BYTECOMP) $*.el
+	$(BYTECOMP) $*.el;
 
 elc:	$(ELC)
 
