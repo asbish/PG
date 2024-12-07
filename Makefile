@@ -32,7 +32,7 @@ EMACS=$(shell if [ -z "`which emacs`" ]; then echo "Emacs executable not found";
 # NBB: DESTDIR provides for staged installs, for instance when building 
 # Debian packages, see http://www.gnu.org/prep/standards/html_node/DESTDIR.html
 PREFIX=$(DESTDIR)/usr
-DEST_PREFIX=$(DESTDIR)/usr
+DEST_PREFIX=$(PREFIX)
 
 # subdirectories for provers: to be compiled and installed
 PROVERS=coq easycrypt pghaskell pgocaml pgshell phox qrhl
