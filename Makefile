@@ -32,7 +32,7 @@ EMACS=$(shell if [ -z "`command -v emacs`" ]; then echo "Emacs executable not fo
 # NBB: DESTDIR provides for staged installs, for instance when building 
 # Debian packages, see http://www.gnu.org/prep/standards/html_node/DESTDIR.html
 PREFIX=$(DESTDIR)/usr
-DEST_PREFIX=$(DESTDIR)/usr
+DEST_PREFIX=$(PREFIX)
 
 # subdirectories for provers: to be compiled and installed
 PROVERS=coq easycrypt pghaskell pgocaml pgshell phox qrhl
@@ -160,7 +160,7 @@ checkdoc: $(EL)
 ## work with make -j n.
 ##
 .el.elc:
-	$(BYTECOMP) $*.el
+	$(BYTECOMP) $*.el;
 
 elc:	$(ELC)
 
